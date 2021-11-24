@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@jsonplaceholder/api-codegen": ["libs/api-codegen/src/index.ts"],
+      "@jsonplaceholder/posts": ["libs/posts/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

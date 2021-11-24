@@ -1,0 +1,11 @@
+{
+  "$schema": "../../node_modules/ng-openapi-gen/ng-openapi-gen-schema.json",
+  "input": "libs/api-codegen/jsonplaceholder.openapi.yml",
+  "output": "libs/api-codegen/src/lib",
+  "skipJsonSuffix": true,
+  "module": "JSONPlaceholderApiModule",
+  "configuration": "JSONPlaceholderApiConfiguration",
+  "requestBuilder": "JSONPlaceholderApiRequestBuilder",
+  "response": "JSONPlaceholderApiStrictHttpResponse",
+  "baseService": "JSONPlaceholderApiBaseService"
+}

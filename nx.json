@@ -27,12 +27,18 @@
     ]
   },
   "projects": {
+    "api-codegen": {
+      "tags": []
+    },
     "client": {
       "tags": []
     },
     "client-e2e": {
       "tags": [],
       "implicitDependencies": ["client"]
+    },
+    "posts": {
+      "tags": []
     }
   }
 }

@@ -1,6 +1,31 @@
 {
   "version": 1,
   "projects": {
+    "api-codegen": {
+      "projectType": "library",
+      "root": "libs/api-codegen",
+      "sourceRoot": "libs/api-codegen/src",
+      "prefix": "jsonplaceholder",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api-codegen"],
+          "options": {
+            "jestConfig": "libs/api-codegen/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/api-codegen/src/**/*.ts",
+              "libs/api-codegen/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "client": {
       "projectType": "application",
       "root": "apps/client",
@@ -114,6 +139,31 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/client-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "posts": {
+      "projectType": "library",
+      "root": "libs/posts",
+      "sourceRoot": "libs/posts/src",
+      "prefix": "jsonplaceholder",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/posts"],
+          "options": {
+            "jestConfig": "libs/posts/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/posts/src/**/*.ts",
+              "libs/posts/src/**/*.html"
+            ]
           }
         }
       }

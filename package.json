@@ -7,7 +7,8 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "api-codegen": "ng-openapi-gen -c libs/api-codegen/ng-openapi-gen.json"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/platform-browser": "^12.2.0",
     "@angular/platform-browser-dynamic": "^12.2.0",
     "@angular/router": "^12.2.0",
+    "@ng-stack/forms": "^2.4.0",
     "@nrwl/angular": "12.9.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -49,6 +51,7 @@
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.0.3",
     "jest-preset-angular": "9.0.7",
+    "ng-openapi-gen": "0.15.0",
     "prettier": "^2.3.1",
     "ts-jest": "27.0.3",
     "typescript": "~4.3.5"
